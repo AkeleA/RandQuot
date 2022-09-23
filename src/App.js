@@ -1,23 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Axios from "axios";
+import { useEffect, useState } from "react";
 
 function App() {
+  const [randomFact, setRandomFact] = useState("");
+
+  const newRandFact = () => {
+    Axios.get("https://uselessfacts.jsph.pl/random.json?language=en").then(
+      (res) => {
+        setRandomFact(res.data);
+      }
+    );
+  };
+
+  useEffect(() => {
+    newRandFact();
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+      <h1 className="top">Want to Learn something new? Click the button</h1>
+      <button className="fact" onClick={newRandFact}>
+        Click Me!
+      </button>
+      <div className="power">
+        <p>{randomFact?.text}</p>
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          {" "}
+          Source:{" "}
+          <a href={"{randomFact?.source}"} target="_blank" rel="noreferrer">
+            {randomFact?.source}
+          </a>
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      </div>
     </div>
   );
 }
