@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/RandQuot/static/css/main.b5168bc0.css",
+    "main.js": "/RandQuot/static/js/main.11fb3a05.js",
+    "static/js/787.633e4fcc.chunk.js": "/RandQuot/static/js/787.633e4fcc.chunk.js",
+    "index.html": "/RandQuot/index.html",
+    "main.b5168bc0.css.map": "/RandQuot/static/css/main.b5168bc0.css.map",
+    "main.11fb3a05.js.map": "/RandQuot/static/js/main.11fb3a05.js.map",
+    "787.633e4fcc.chunk.js.map": "/RandQuot/static/js/787.633e4fcc.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b5168bc0.css",
+    "static/js/main.11fb3a05.js"
+  ]
+}
